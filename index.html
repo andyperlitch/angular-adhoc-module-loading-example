@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>couch potato test</title>
+  <script type="text/javascript" src="/bower_components/lodash/lodash.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-load/angular-load.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-couch-potato/dist/angular-couch-potato.js"></script>
+  <script type="text/javascript" src="/app.js"></script>
+</head>
+<body ng-app="app">
+  <div ng-controller="MainAppCtrl">
+    <button ng-click="loadModule('othermodule')">load module with no name conflicts</button><br>
+    <button ng-click="loadModule('badmodule')">load module with name conflicts (see errors in window.console)</button>
+    <h4>target:</h4>
+    <div style="padding: 10px; border: 1px solid #DEDEDE; border-radius: 5px; width: 300px;" id="target"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "badmodule",
+  "version": "0.0.0",
+  "directiveName": "existingDir",
+  "moduleName": "badmodule",
+  "main": "badmodule.js"
+}
