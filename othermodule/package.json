@@ -1,0 +1,7 @@
+{
+  "name": "othermodule",
+  "version": "0.0.0",
+  "directiveName": "testDir",
+  "moduleName": "othermodule",
+  "main": "othermodule.js"
+}

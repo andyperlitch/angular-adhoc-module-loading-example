@@ -1,0 +1,25 @@
+{
+  "name": "couch-test",
+  "version": "0.0.0",
+  "authors": [
+    "Andy Perlitch <andyperlitch@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-couch-potato": "~0.2.3",
+    "angular": "~1.3.14",
+    "angular-load": "~0.2.0",
+    "lodash": "~3.4.0",
+    "jquery": "~2.1.3"
+  },
+  "resolutions": {
+    "angular": "~1.3.14"
+  }
+}
