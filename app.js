@@ -45,13 +45,13 @@ angular.module('app', ['angularLoad', 'scs.couch-potato'])
   $scope.loadModule = function(path) {
 
     // get the package.json of module to load
-    $http.get('/' + path + '/package.json').then(function(response) {
+    $http.get( path + '/package.json').then(function(response) {
 
       var packageJson = response.data;
 
       // load the main script
       // NOTE: does not take into account a "main" that is array
-      angularLoad.loadScript('/' + path + '/' + packageJson.main).then(function() {
+      angularLoad.loadScript( path + '/' + packageJson.main).then(function() {
 
         // Get the components in the module (services, directives, etc)
         var queue = angular.module(packageJson.moduleName)._invokeQueue;
