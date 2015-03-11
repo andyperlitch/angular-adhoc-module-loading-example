@@ -13,6 +13,35 @@ angular.module('app', ['angularLoad', 'scs.couch-potato'])
 // Main app controller for this example
 .controller('MainAppCtrl', function($scope, $http, angularLoad, $couchPotato, $element, $compile, $injector) {
 
+  // Holds information that will be used
+  // when launching the application
+  $scope.launchOptions = {
+
+    // Will be set to true by user if they want
+    // to use a config file
+    usingConfigFile: false,
+
+    // The config file to use
+    configFile: '',
+
+    // Will be set to true by user if they want
+    // to specify custom parameters
+    usingCustomParams: false,
+
+    // The custom parameters to launch with.
+    // Start with one for first value.
+    customParams: [{}],
+
+    // Will be set to true if the user wants to
+    // save the entered parameters as a config
+    // file for later use.
+    saveConfig: false,
+
+    // The name of the saved config file
+    configFileName: ''
+
+  };
+
   // Place where the loaded directive will go
   var $trg = $element.find('#target');
 
@@ -22,7 +51,7 @@ angular.module('app', ['angularLoad', 'scs.couch-potato'])
   // then inserts it into the target element
   $scope.compileTarget = function(directiveName) {
     var attrString = _.kebabCase(directiveName); // convertsThisString => converts-this-string
-    var markup = '<div ' + attrString + '></div>';
+    var markup = '<div ' + attrString + ' params="launchOptions.customParams" type="runtime"></div>';
     var element = angular.element(markup);
     var element = $compile(element)($scope);
     $trg.append(element);

@@ -1,0 +1,6 @@
+{
+  "name": "configUiExample",
+  "directiveName": "configUiExample",
+  "moduleName": "andyConfigUiExample",
+  "main": "index.js"
+}
