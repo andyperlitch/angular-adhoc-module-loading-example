@@ -51,7 +51,7 @@ angular.module('app', ['angularLoad', 'scs.couch-potato'])
   // then inserts it into the target element
   $scope.compileTarget = function(directiveName) {
     var attrString = _.kebabCase(directiveName); // convertsThisString => converts-this-string
-    var markup = '<div ' + attrString + ' params="launchOptions.customParams" type="runtime"></div>';
+    var markup = '<div ' + attrString + ' params="launchOptions.customParams" type="launchtime"></div>';
     var element = angular.element(markup);
     var element = $compile(element)($scope);
     $trg.append(element);
